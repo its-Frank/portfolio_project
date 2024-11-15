@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .header-section {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'base' %}">Frankline Orina</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'base' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="container mt-4">
+      {% if messages %} {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %} {% endif %} {% block content %} {% endblock %}
+    </div>
+
+    <!-- Header Section -->
+    {% load static %}
+    <header class="header-section">
+      <div class="container text-center">
+        <!-- Using an image from static files -->
+        <img
+          src="{% static 'images/Frank.img (2).jpeg' %}"
+          alt="Description"
+          class="img-fluid rounded-circle"
+          width="250px"
+        />
+      </div>
+    </header>
+    <!-- Tagline Section -->
+    <section class="tagline-section">
+      <div class="container text-center">
+        <h2>Web Developer</h2>
+        <p class="lead">
+          Ambitious and dedicated Computer Science student at the University of
+          Eldoret with a solid foundation in frontend and backend development,
+          particularly in Node.js and the Express framework. Proven ability to
+          develop effective and efficient web solutions demonstrated through
+          practical projects and certifications. Eager to leverage my skills in
+          a dynamic professional environment to drive technological
+          advancements.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-3">
+      <div class="container">
+        <div class="d-flex justify-content-center mb-3">
+          <ul class="nav">
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="{% url 'projects' %}"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Frankline Orina. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

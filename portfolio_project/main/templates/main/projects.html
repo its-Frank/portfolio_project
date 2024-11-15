@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'base' %}">Frankline Orina</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'base' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container">
+        <h1>My Projects</h1>
+        <p class="lead">Showcasing some of my best work</p>
+      </div>
+    </header>
+    <section id="projects" class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Car Parking System -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Car Parking System</h5>
+                <p class="card-text">
+                  A web solution for managing car parking and user transactions
+                  using Express.js and MySQL.
+                </p>
+                <a
+                  href="https://github.com/its-Frank/parkingsystem"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >GitHub Link</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Cambrian Valuers Limited -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Cambrian Valuers Limited</h5>
+                <p class="card-text">
+                  Developed a responsive website with user authentication and
+                  property listings using Node.js and MySQL.
+                </p>
+                <a
+                  href="https://www.cambrianvaluers.co.ke/"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >Website Link</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Freelancing Marketplace -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Freelancing Marketplace</h5>
+                <p class="card-text">
+                  A platform connecting freelancers and clients with job
+                  creation and bidding functionalities.
+                </p>
+                <a
+                  href="https://github.com/its-Frank/Freelance_Schema"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >GitHub Link</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- News Homepage Main -->
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">News Homepage Main</h5>
+                <p class="card-text">
+                  A modern news homepage design showcasing current events and
+                  categories.
+                </p>
+                <a
+                  href="https://github.com/its-Frank/news-homepage-main1"
+                  target="_blank"
+                  class="btn btn-primary"
+                  >GitHub Link</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-3">
+      <div class="container">
+        <div class="d-flex justify-content-center mb-3">
+          <ul class="nav">
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-white" href="{% url 'projects' %}"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Frankline Orina. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
